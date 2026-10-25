@@ -136,7 +136,7 @@
       }
 
       .hero {
-        padding-block: clamp(4.5rem, 12vw, 9rem) clamp(4rem, 9vw, 7rem);
+        padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(4rem, 9vw, 7rem);
       }
 
       .eyebrow,
@@ -150,6 +150,37 @@
 
       .eyebrow {
         margin: 0 0 1.25rem;
+      }
+
+      .hero-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(1.5rem, 4vw, 4rem);
+      }
+
+      .hero-copy {
+        flex: 1 1 auto;
+        align-self: flex-start;
+      }
+
+      .hero-portrait {
+        flex: 0 0 auto;
+        width: min(24rem, 34vw);
+        max-width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 1.1rem;
+        background: var(--surface-raised);
+        box-shadow: 0 1.5rem 2.8rem rgb(5 10 8 / 40%);
+        overflow: hidden;
+      }
+
+      .hero-portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
       }
 
       .hero h1 {
@@ -311,6 +342,15 @@
           justify-content: flex-start;
         }
 
+        .hero-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .hero-portrait {
+          width: min(18rem, 75vw);
+        }
+
         .projects-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -334,7 +374,7 @@
         }
 
         .hero {
-          padding-block: 4rem 3.5rem;
+          padding-block: 2.5rem 3.5rem;
         }
 
         .projects-grid {
@@ -385,13 +425,21 @@
 
     <main id="main-content" tabindex="-1">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <p class="eyebrow"><span class="prompt">~/portfolio</span> &nbsp;·&nbsp; profile</p>
-        <h1 id="hero-title"><span class="prompt">&gt; </span>J. Junior</h1>
-        <p class="hero-role">Full-stack developer</p>
-        <p class="hero-intro">20 years of experience building across the full stack.</p>
-        <div class="hero-actions">
-          <a class="button-link" href="#projects">Explore selected work</a>
-          <a class="text-link" href="#about">More about me <span aria-hidden="true">&nbsp;↘</span></a>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="prompt">~/portfolio</span> &nbsp;·&nbsp; profile</p>
+            <h1 id="hero-title"><span class="prompt">&gt; </span>J. Junior</h1>
+            <p class="hero-role">Full-stack developer</p>
+            <p class="hero-intro">20 years of experience building across the full stack.</p>
+            <div class="hero-actions">
+              <a class="button-link" href="#projects">Explore selected work</a>
+              <a class="text-link" href="#about">More about me <span aria-hidden="true">&nbsp;↘</span></a>
+            </div>
+          </div>
+
+          <div class="hero-portrait" aria-label="Portrait of J. Junior">
+            <img src="assets/jjunior-portrait.jpe" alt="Portrait of J. Junior">
+          </div>
         </div>
       </section>
 
