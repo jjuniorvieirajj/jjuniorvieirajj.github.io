@@ -7,13 +7,15 @@ Noticeably reduce the visual gap between the site header and the
 
 ## Approach
 
-Adjust only the hero section's top padding at the existing desktop and mobile
+Adjust the hero section's top padding at the existing desktop and mobile
 breakpoints: use `clamp(2.5rem, 6vw, 4.5rem)` on desktop and `2.5rem` on mobile.
-This is a more noticeable reduction from the current values. Keep the hero's
-bottom padding, content, portrait, and layout unchanged. This is narrower than
-changing the entire hero padding or reducing header spacing.
+At desktop widths, top-align the text column while keeping the portrait
+vertically centered; this removes the extra gap caused by centering the shorter
+text column beside the portrait. Keep the hero's bottom padding, content, and
+mobile layout unchanged.
 
 ## Verification
 
-Preview the homepage at desktop and mobile widths and confirm the eyebrow sits
-closer to the header without changing the spacing below the hero content.
+Preview the homepage at desktop and mobile widths. Confirm the desktop eyebrow
+starts at the reduced top padding, the portrait remains centered, the mobile
+layout is unchanged, and the spacing below the hero remains unchanged.
