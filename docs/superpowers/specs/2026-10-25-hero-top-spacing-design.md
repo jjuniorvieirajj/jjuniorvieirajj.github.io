@@ -2,15 +2,16 @@
 
 ## Goal
 
-Reduce the visual gap between the site header and the `~/portfolio · profile`
-eyebrow on the homepage.
+Noticeably reduce the visual gap between the site header and the
+`~/portfolio · profile` eyebrow on the homepage.
 
 ## Approach
 
 Adjust only the hero section's top padding at the existing desktop and mobile
-breakpoints. Keep the hero's bottom padding, content, portrait, and layout
-unchanged. This is narrower than changing the entire hero padding or reducing
-header spacing.
+breakpoints: use `clamp(2.5rem, 6vw, 4.5rem)` on desktop and `2.5rem` on mobile.
+This is a more noticeable reduction from the current values. Keep the hero's
+bottom padding, content, portrait, and layout unchanged. This is narrower than
+changing the entire hero padding or reducing header spacing.
 
 ## Verification
 
